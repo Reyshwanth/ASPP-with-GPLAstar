@@ -115,6 +115,7 @@ class AnimateV2:
             # print(args)
             if len(args)==2:
                 artist_name, data = args
+                #breakpoint()
                 x,y = data[0], data[1]
                 cls._add(artist_name, x, y, **kwargs)
             else:
@@ -164,7 +165,8 @@ class AnimateV2:
             # fig.canvas.draw_idle()
             plt.legend()    # must have already defined this
             plt.show(block=False)    
-            plt.pause(0.1)
+            breakpoint()
+            plt.pause(3)
 
             # Store the background in new class instance
             o = AnimateV2(figure_number=1, figure_name=figure_name)
